@@ -1,0 +1,80 @@
+﻿@page "/"
+
+@using BlazorUIOcean.Components;
+
+<PageTitle>Index</PageTitle>
+
+<div class="container">
+    @if (InitialGameParametersVisible)
+    {
+        <InitialGameParameters OnClickCallback="@CreateOcean"></InitialGameParameters>
+    }
+    @if (oceanVisible)
+    {
+        <div class="mt-4">
+        @for (int i = 0; i < ocean.Height; i++)
+        {
+            <div class="row align-items-start">
+                @for (int j = 0; j < ocean.Width; j++)
+                {
+                    <div class="border border-secondary d-flex justify-content-center align-items-center" style="width: 80px; height: 80px;">
+                       @((MarkupString)cells[i, j])
+                    </div>
+                }
+            </div>
+        }
+        </div>
+
+        @if (!gameOneIsNotOver)
+        {
+            <div>Game Is Over</div>
+        }
+
+        <div class="mt-4">Count Of Predators: @gameOne.GetCountOfPredators() Count Of Preys: @gameOne.GetCountOfPreys() </div>
+
+        @if (gameOneIsNotOver)
+        {
+            <button type="button" class="btn btn-secondary" @onclick="@RunGame">Run Game</button>
+        }
+    }
+</div>
+
+@code{
+    bool oceanVisible = false;
+    bool InitialGameParametersVisible = true;
+
+    bool gameOneIsNotOver = true;
+
+    Ocean ocean = null;
+    GameBlazor gameOne = null;
+
+    string[,] cells = null;
+
+    void CreateOcean(GameParameters GameParameters)
+    {
+        InitialGameParametersVisible = false;
+
+        cells = new string[GameParameters.OceanHeight, GameParameters.OceanWidth];
+
+        gameOne = new GameBlazor(GameParameters);
+
+        UpdateOCeanToDisplay();
+
+        oceanVisible = true; 
+    }
+
+    private void RunGame()
+    {
+        if (gameOneIsNotOver)
+        {
+            gameOneIsNotOver = gameOne.RunGame();
+            UpdateOCeanToDisplay();
+        }
+    }
+
+    private void UpdateOCeanToDisplay()
+    {
+        ocean = gameOne.GetOcean();
+        OceanAdapter.FillOutCells(cells, ocean);
+    }
+}

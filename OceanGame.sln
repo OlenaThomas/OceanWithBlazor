@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanGame", "OceanGame\OceanGame.csproj", "{B1651AF8-AC34-4CAB-8744-B7C24FEA77A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanLibrary", "OceanLibrary\OceanLibrary.csproj", "{7245DAC5-2902-4947-B5F9-0E8E23ABC42E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorUIOcean", "BlazorUIOcean\BlazorUIOcean.csproj", "{F503AB43-C829-4165-9B33-C20A92BF5A52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OceanLibraryCore", "OceanLibrary\OceanLibraryCore.csproj", "{AE82A371-4DDF-4C08-B9A3-74E8B551D651}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1651AF8-AC34-4CAB-8744-B7C24FEA77A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1651AF8-AC34-4CAB-8744-B7C24FEA77A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1651AF8-AC34-4CAB-8744-B7C24FEA77A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1651AF8-AC34-4CAB-8744-B7C24FEA77A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7245DAC5-2902-4947-B5F9-0E8E23ABC42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7245DAC5-2902-4947-B5F9-0E8E23ABC42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7245DAC5-2902-4947-B5F9-0E8E23ABC42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7245DAC5-2902-4947-B5F9-0E8E23ABC42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F503AB43-C829-4165-9B33-C20A92BF5A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F503AB43-C829-4165-9B33-C20A92BF5A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F503AB43-C829-4165-9B33-C20A92BF5A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F503AB43-C829-4165-9B33-C20A92BF5A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE82A371-4DDF-4C08-B9A3-74E8B551D651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE82A371-4DDF-4C08-B9A3-74E8B551D651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE82A371-4DDF-4C08-B9A3-74E8B551D651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE82A371-4DDF-4C08-B9A3-74E8B551D651}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ED5B252-B317-4338-B6DD-979E5114F8BA}
+	EndGlobalSection
+EndGlobal

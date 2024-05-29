@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OceanLibrary.Cell">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEAAAAAAIIAAAIAAAAAAAAAABQAAAAAAAAAAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OceanLibrary.Obstacle" Collapsed="true">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Obstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OceanLibrary.Ocean">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQCQAAAEBJAgAAAJCEAACEABAAABAAEAAACABgIAAUI=</HashCode>
+      <FileName>Ocean.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_cells" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OceanLibrary.OceanConsoleVeiwer" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OceanConsoleVeiwer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OceanLibrary.Predator" Collapsed="true">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAIAAAAAAAAAAAAAABAAAAAQAIABAAI=</HashCode>
+      <FileName>Predator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OceanLibrary.Prey" Collapsed="true">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAIAAAEIAIAAAAABAAAAAABAAAAAAAIAAAAA=</HashCode>
+      <FileName>Prey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OceanLibrary.Randomizer" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Randomizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OceanLibrary.IOcean" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAABAAAAAAACAAAAEAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>IOcean.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OceanLibrary.CellViewType" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAIEAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>CellViewType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

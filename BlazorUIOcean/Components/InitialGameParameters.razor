@@ -1,0 +1,57 @@
+﻿<h3>Initial Game Parameters</h3>
+
+<div class="h4">Ocean 1</div>
+<EditForm Model="@GameParameters">
+    <DataAnnotationsValidator />
+    <p>
+        Ocean Width:<br />
+        <InputNumber id="oceanWidth" @bind-Value="GameParameters.OceanWidth" /><br />
+        <ValidationMessage For="@(() => GameParameters.OceanWidth)" />
+    </p>
+    <p>
+        Ocean Height:<br />
+        <InputNumber id="oceanHeight" @bind-Value="GameParameters.OceanHeight" /><br />
+        <ValidationMessage For="@(() => GameParameters.OceanHeight)" />
+    </p>
+    <p>
+        Number Of Iteration:<br />
+        <InputNumber id="numberOfIteration" @bind-Value="GameParameters.NumberOfIteration" /><br />
+        <ValidationMessage For="@(() => GameParameters.NumberOfIteration)" />
+    </p>
+    <p>
+        Number Of Preys:<br />
+        <InputNumber id="numberOfPreys" @bind-Value="GameParameters.NumberOfPreys" /><br />
+        <ValidationMessage For="@(() => GameParameters.NumberOfPreys)" />
+    </p>
+    <p>
+        Number Of Predetors:<br />
+        <InputNumber id="numberOfPredetors" @bind-Value="GameParameters.NumberOfPredetors" /><br />
+        <ValidationMessage For="@(() => GameParameters.NumberOfPredetors)" />
+    </p>
+    <p>
+        Number Of Obstacles:<br />
+        <InputNumber id="numberOfObstacles" @bind-Value="GameParameters.NumberOfObstacles" /><br />
+        <ValidationMessage For="@(() => GameParameters.NumberOfObstacles)" />
+    </p>
+    <button type="button" class="btn btn btn-success fs-6 px-4 py-2 me-4"
+            @onclick="@(() => OnClickCallback.InvokeAsync(GameParameters))">
+            Ok
+    </button>
+</EditForm>
+
+@code {
+    public GameParameters GameParameters = new GameParameters();
+
+    [Parameter]
+    public EventCallback<GameParameters> OnClickCallback { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        GameParameters.OceanWidth = Ocean.MAX_NUM_COLS;
+        GameParameters.OceanHeight = Ocean.MAX_NUM_ROWS;
+        GameParameters.NumberOfIteration = GameBlazor.STANDARD_NUMBER_OF_ITERATIONS;
+        GameParameters.NumberOfPreys = OceanInitializer.MAX_NUM_PREYS;
+        GameParameters.NumberOfPredetors = OceanInitializer.MAX_NUM_PREDETORS;
+        GameParameters.NumberOfObstacles = OceanInitializer.MAX_NUM_OBSTACLES;
+    }
+}
